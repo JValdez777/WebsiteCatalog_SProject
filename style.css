@@ -1,22 +1,42 @@
 html,
-body {
+body.main-page {
   margin: 0;
   padding: 0;
+  position: relative;
+  overflow: hidden;
+  
+}
+
+.main-background{
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-image: url(https://www.kappahobby.com/cdn/shop/files/4573102673206-MRSSIDEMSSTRIKEFREEDOMGUNDAMTYPEII_1.jpg?v=1719313904);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  filter: blur(1px);
+  z-index: -1;
+
 }
 
 .main-header {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255, 0);
   padding-bottom: 10px;
 }
 
 .title {
-  text-align: center;
+  text-align: left;
   margin: 0;
-  font-size: 8em;
-  font-family: "Helvetica";
+  font-size: 8;
+  font-family: "Garamond";
   font-weight: normal;
-  color: white;
+  color: black;
 }
+
+
 
 #card-container {
   display: flex;
@@ -27,6 +47,7 @@ body {
 .card {
   width: 300px;
   border: 1px solid #ccc;
+  background-color: white;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin: 5px;
@@ -35,7 +56,7 @@ body {
 .card-content {
   padding: 20px;
   font-family: "Verdana";
-  color: #777;
+  color: black;
 }
 
 .card-content h2 {
@@ -45,14 +66,18 @@ body {
 
 .card img {
   width: 100%;
-  height: auto;
+  height:100%;
 }
 
 .footer {
+  position: fixed;
+  bottom: 0; 
+  width: 100%;
   display: flex;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.3);
   padding: 10px;
+  z-index: 10;
 }
 
 button {
