@@ -7,30 +7,59 @@
     <script type="text/javascript" src="scripts.js"></script>
   </head>
 
-  <body class="main-page">
-    <div class="main-background"></div>
-    <header class="main-header">
-      <h1 class="title">Gundam Catalog</h1>
-    </header>
-    
-    <div id="card-container"></div>
-    <div class="card" style="display: none">
-      <div class="card-content">
-        <h2>Gundam Kit Title</h2>
-        <img src="" alt="Gundam Kit Poster" />
-        <ul>
-          <li>Bullet Point 1</li>
-          <li>Bullet Point 2</li>
-          <li>Bullet Point 3</li>
-        </ul>
-      </div>
+<!-- Landing Page -->
+<body class="main-page">
+  <section id="landing">
+  <header class="main-header">
+    <a class="title">Gundam Catalog</h1>
+    <nav class="top-nav">
+      <a href="#landing">HOME</a>
+      <a href="#catalog">CATALOG</a>
+      <a href="#about">ABOUT GUNDAM</a>
+    </nav>
+  </header>
+  </section>
+<!-- ----------------------------------- -->
+
+<!-- Catalog Section -->
+  <section id = "catalog">
+    <div class="container">
+          <h1 class="sub-title">Gundam Kits</h1>
+          <div class="catalogMenu">
+            <a href="#" class="catalogMenu-link" onclick="filterGundamName('RX-78'); return false;">Sort by Gundam Name "RX-78"</a>
+            <a href="#" class="catalogMenu-link" onclick="filterGundamName('ZGMF'); return false;">Sort by Gundam Name "ZGMF"</a>
+            <a href="#" class="catalogMenu-link" onclick="sortDates(); return false;">Sort by Dates</a>
+            <a href="#" class="catalogMenu-link" onclick="sortSeries(); return false;">Sort by Series</a>
+            <a href="#" class="catalogMenu-link" onclick="removeLastCard(); return false;">Remove A Card!</a>
+          </div>
+            <div id="card-container"></div>
+            <div class="card" style="display: none">
+              <div class="card-content">
+                <h2>Gundam Kit Title</h2>
+                <img src="" alt="Gundam Kit Poster" />
+                <ul>
+                  <!-- <li>Grade: <span class="grade"></span></li>
+                  <li>Release Year: <span class="release-year"></span></li>
+                  <li>Series: <span class="series"></span></li>
+                  <li>Price: <span class="price-usd"></span></li> -->
+                </ul>
+              </div>
+            </div>
     </div>
-    <div class="footer">
-      <button onclick="filterGundamName('ZGMF');"> Sort by Gundam Name</button>
-      <button onclick="sortDates();"> Sort by Dates</button>
-      <button onclick="sortSeries();"> Sort by Series</button>
-      <button onclick="quoteAlert();">Get A Quote!</button>
-      <button onclick="removeLastCard();">Remove A Card!</button>
+  </section>
+<!-- ----------------------------------- -->
+
+<!-- About Section -->
+  <section id = "about">
+    <div class = "container">
+      <h1 class="aboutTitle">About Gundams:</h1>
+      <p class="aboutSection">
+        Gundams are the robots from the popular series "Gundam". From these shows spawned the very popular Gunpla model kits as shown here.
+        There are so many model kits that span many spin-off shows, each with its own unique flair.
+        The goal with this website is to make it easier to find your favorite Gundam—whether it be old, new, or from a niche spin-off show, it doesn't matter!
+      </p>
     </div>
-  </body>
+  </section>
+  <!-- ----------------------------------- -->
+</body>
 </html>

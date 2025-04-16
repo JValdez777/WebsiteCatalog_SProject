@@ -1,55 +1,108 @@
+*{
+  scroll-behavior: smooth;
+}
+
 html,
 body.main-page {
   margin: 0;
   padding: 0;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden; /* was preventing scrolling so adding scrolling on y axis*/
+  overflow-y: auto;
   
 }
 
-.main-background{
-  position: fixed;
-  top: 0%;
-  left: 0%;
-  width: 100%;
-  height: 100%;
-  background-image: url(https://www.kappahobby.com/cdn/shop/files/4573102673206-MRSSIDEMSSTRIKEFREEDOMGUNDAMTYPEII_1.jpg?v=1719313904);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  filter: blur(1px);
-  z-index: -1;
-
-}
-
 .main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
   background-color: rgba(255, 255, 255, 0);
-  padding-bottom: 10px;
+  padding-bottom:  20px 30px;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 1000;
 }
 
 .title {
   text-align: left;
   margin: 0;
-  font-size: 8;
+  font-size: 30px;
   font-family: "Garamond";
   font-weight: normal;
-  color: black;
+  color: white;
+}
+/* navigation bar implementation */
+.top-nav{
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  padding: 0px 50px;
+  font-family: "Garamond";
 }
 
+.top-nav a {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0);
+  padding: 10px 15px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
 
+.top-nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
 
+/* ------------------------------ */
+
+/* attribute for sections and setting up the landing and catalog pages */
+section{
+  min-height: 100vh;
+  padding: 8rem 12%;
+}
+
+#landing{
+  background-image: url(https://p-bandai.com/img/us/p/m/N2592154001001_006.jpg);
+  background-size: cover;
+  background-position: 50% 30%;
+  min-height: 100vh;
+  padding-top: 100px;
+  min-height: 100vh;
+  position: relative;
+}
+
+#catalog {
+  padding-top: 150px;
+  background-color: white;
+}
+
+/* ------------------------------ */
+
+/* Card Section */
 #card-container {
   display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
   justify-content: center;
   margin: 20px;
 }
 
 .card {
-  width: 300px;
+  /* 0: card wont grow larger than calculated width
+  1: card can shrink if container too small
+  calc(): card's initial width is calculated based on one quarter containers width -20 px */
+  flex: 0 1 calc(25% - 20px); 
+  width: 500px;
+  height: 400px;
   border: 1px solid #ccc;
   background-color: white;
   border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 7px 9px rgba(0, 0, 0, 0.1);
   margin: 5px;
 }
 
@@ -66,18 +119,45 @@ body.main-page {
 
 .card img {
   width: 100%;
-  height:100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
-.footer {
-  position: fixed;
+/* ------------------------------ */
+
+.footer{
+  position: relative;
   bottom: 0; 
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   background-color: rgba(0, 0, 0, 0.3);
   padding: 10px;
   z-index: 10;
+}
+.catalogMenu{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.catalogMenu a.catalogMenu-link{
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  margin-right: 15px;
+  /* changes mouse to hand icon */
+  cursor: pointer; 
+}
+
+.catalogMenu a.catalogMenu-link:hover{
+  text-decoration: underline;
 }
 
 button {
@@ -92,4 +172,31 @@ button {
   font-size: 22px;
   cursor: pointer;
   margin: 5px;
+}
+
+.sub-title{
+  text-align: center;
+}
+
+
+.container{
+  padding: 10px 10%;
+}
+
+
+.row{
+  display:inline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* About Section */
+.aboutSection{
+  font-size: 30px;
+  text-align: center;
+}
+
+.aboutTitle{
+  font-size: 30px;
+  text-align: center;
 }

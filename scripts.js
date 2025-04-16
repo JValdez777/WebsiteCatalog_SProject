@@ -1,32 +1,12 @@
-/**
- * Data Catalog Project Starter Code - SEA Stage 2
- *
- * This file is where you should be doing most of your work. You should
- * also make changes to the HTML and CSS files, but we want you to prioritize
- * demonstrating your understanding of data structures, and you'll do that
- * with the JavaScript code you write in this file.
- *
- * The comments in this file are only to help you learn how the starter code
- * works. The instructions for the project are in the README. That said, here
- * are the three things you should do first to learn about the starter code:
- * - 1 - Change something small in index.html or style.css, then reload your
- *    browser and make sure you can see that change.
- * - 2 - On your browser, right click anywhere on the page and select
- *    "Inspect" to open the browser developer tools. Then, go to the "console"
- *    tab in the new window that opened up. This console is where you will see
- *    JavaScript errors and logs, which is extremely helpful for debugging.
- *    (These instructions assume you're using Chrome, opening developer tools
- *    may be different on other browsers. We suggest using Chrome.)
- * - 3 - Add another string to the titles array a few lines down. Reload your
- *    browser and observe what happens. You should see a fourth "card" appear
- *    with the string you added to the array, but a broken image.
- *
- */
 
-
+///Data Set 
+///An array of objects that contains the name of object followed with several details
+/// such as release date price and an image url for its thumbnail.
+/// Note: Remove details from its name and make thme into bullet points
 let gundam_kits = [
       {
-        "name": "RX-78-2 Gundam (HG 1/144)",
+        "name": "RX-78-2 Gundam(HG | Series: Mobile Suit Gundam | Release: 1980)",
+        "size": "1/144",
         "grade": "High Grade",
         "release_year": 1980,
         "price_yen": 300,
@@ -35,7 +15,8 @@ let gundam_kits = [
         "image_url": "https://m.media-amazon.com/images/I/71jb0jBaPGL.jpg"
       },
       {
-        "name": "ZGMF-X10A Freedom Gundam (HG 1/144)",
+        "name": "ZGMF-X10A Freedom Gundam (HG | Series: Gundam SEED | Release: 2004)",
+        "size": "1/144",
         "grade": "High Grade",
         "release_year": 2004,
         "price_yen": 1200,
@@ -44,7 +25,8 @@ let gundam_kits = [
         "image_url": "https://i.ebayimg.com/images/g/JsgAAOSwYRpjndne/s-l1200.jpg"
       },
       {
-        "name": "ASW-G-08 Gundam Barbatos (HG 1/144)",
+        "name": "ASW-G-08 Gundam Barbatos (HG | Series: Gundam: Iron-Blooded Orphans | Release: 2015)",
+        "size": "1/144",
         "grade": "High Grade",
         "release_year": 2015,
         "price_yen": 1000,
@@ -53,7 +35,8 @@ let gundam_kits = [
         "image_url": "https://m.media-amazon.com/images/I/71XivClnE2L._AC_UF894,1000_QL80_.jpg"
       },
       {
-        "name": "RX-78-2 Gundam Ver. 3.0 (MG 1/100)",
+        "name": "RX-78-2 Gundam Ver. 3.0 (MG | Series: Mobile Suit Gundam | Release: 2013)",
+        "size": "1/100",
         "grade": "Master Grade",
         "release_year": 2013,
         "price_yen": 4500,
@@ -62,7 +45,8 @@ let gundam_kits = [
         "image_url": "https://i.ebayimg.com/images/g/ORsAAOSwU-hjBYwO/s-l1200.jpg"
       },
       {
-        "name": "ZGMF-X20A Strike Freedom Gundam (MG 1/100)",
+        "name": "ZGMF-X20A Strike Freedom Gundam (MG | Series: Gundam SEED | Release: 2006)",
+        "size": "1/100",
         "grade": "Master Grade",
         "release_year": 2006,
         "price_yen": 5000,
@@ -71,7 +55,8 @@ let gundam_kits = [
         "image_url": "https://cdn.shopify.com/s/files/1/2786/5582/products/mg-zgmf-x20a-strike-freedom-gundam-pa.jpg?v=1657133255"
       },
       {
-        "name": "XXXG-00W0 Wing Gundam Zero EW Ver. (MG 1/100)",
+        "name": "XXXG-00W0 Wing Gundam Zero EW Ver. (MG | Series: Gundam Wing| Release: 2010)",
+        "size": "1/100",
         "grade": "Master Grade",
         "release_year": 2010,
         "price_yen": 3800,
@@ -80,7 +65,8 @@ let gundam_kits = [
         "image_url": "https://cdn.shopify.com/s/files/1/2786/5582/products/mg-xxxg-00w0-wing-gundam-zero-custom-pa.jpg?v=1631227344"
       },
       {
-        "name": "RX-78-2 Gundam (PG 1/60)",
+        "name": "RX-78-2 Gundam (PG | Series: Mobile Suit Gundam | Release: 1998)",
+        "size": "1/60",
         "grade": "Perfect Grade",
         "release_year": 1998,
         "price_yen": 12000,
@@ -89,16 +75,18 @@ let gundam_kits = [
         "image_url": "https://i.ebayimg.com/images/g/AqQAAOSwfQljm7Sl/s-l1200.png"
       },
       {
-        "name": "ZGMF-X10A Freedom Gundam (PG 1/60)",
+        "name": "ZGMF-X10A Freedom Gundam (PG | Series: Gundam Seed | Release: 2004))",
+        "size": "1/60",
         "grade": "Perfect Grade",
         "release_year": 2004,
         "price_yen": 15000,
         "series": "Mobile Suit Gundam SEED",
         "price_usd": 100.5,
-        "image_url": "https://static.wikia.nocookie.net/gunplabuilders/images/1/17/RG_Freedom_Gundam_boxart.jpg/revision/latest?cb=20170609043716"
+        "image_url": "https://lascalemodel.com/cdn/shop/products/s-l1600_7207a81a-c42f-43f6-a71c-17bccc85f0d0.jpg?v=1672170613"
       },
       {
-        "name": "MBF-P02 Gundam Astray Red Frame (PG 1/60)",
+        "name": "MBF-P02 Gundam Astray Red Frame (PG | Series: Gundam Seed | Release: 2009))",
+        "size": "1/60",
         "grade": "Perfect Grade",
         "release_year": 2009,
         "price_yen": 18000,
@@ -108,43 +96,32 @@ let gundam_kits = [
       }
 ];
 
-const FRESH_PRINCE_URL =
-  "https://upload.wikimedia.org/wikipedia/en/3/33/Fresh_Prince_S1_DVD.jpg";
-const CURB_POSTER_URL =
-  "https://m.media-amazon.com/images/M/MV5BZDY1ZGM4OGItMWMyNS00MDAyLWE2Y2MtZTFhMTU0MGI5ZDFlXkEyXkFqcGdeQXVyMDc5ODIzMw@@._V1_FMjpg_UX1000_.jpg";
-const EAST_LOS_HIGH_POSTER_URL =
-  "https://static.wikia.nocookie.net/hulu/images/6/64/East_Los_High.jpg";
-
-// This is an array of strings (TV show titles)
-let titles = [
-  "Fresh Prince of Bel Air",
-  "Curb Your Enthusiasm",
-  "East Los High",
-  "Hello",
-];
-// Your final submission should have much more data than this, and
-// you should use more than just an array of strings to store it all.
-
 // This function adds cards the page to display the data in the array
-function showCards() {
+// param: takes in an array of objects that will be used to display the cards
+// will default to gundam_kits when not being sorted or first loaded
+function showCards(gundamArr = gundam_kits) {
+  console.log("showCards called with:", gundamArr);
   const cardContainer = document.getElementById("card-container");
   cardContainer.innerHTML = "";
   const templateCard = document.querySelector(".card");
+  
 
-  for (let i = 0; i < gundam_kits.length; i++) {
-    let title = gundam_kits[i].name;
-
-    // This part of the code doesn't scale very well! After you add your
-    // own data, you'll need to do something totally different here.
+  for (let i = 0; i < gundamArr.length; i++) {
+    let title = gundamArr[i].name;
     let imageURL = "";
     
     
-
+    
     const nextCard = templateCard.cloneNode(true); // Copy the template card
-    editCardContent(nextCard, title, gundam_kits[i].image_url); // Edit title and image
+    editCardContent(nextCard, title, gundamArr[i].image_url); // Edit title and image
     cardContainer.appendChild(nextCard); // Add new card to the container
   }
 }
+
+//function for sorting the gundam kits by the series they are from
+//sorts the existing array of objects "gundam_kits and passes it to showCards"
+// Works by comparing two and returning whether one should go before the other by series name.
+// if both are equal it doesnt swap or changes them but instead moves onto comparing b to c (new a and b)
 function sortSeries(){
   gundam_kits.sort((a,b) => {
     if (a.series < b.series) return -1;
@@ -152,8 +129,11 @@ function sortSeries(){
     return 0;
   });
   console.log(gundam_kits)
-  showCards();
+  showCards(gundam_kits);
 }
+
+//function for sorting gundam kits by date released
+// sorts the existing array of obj "gundam_kits" and passes it to showCards
 function sortDates(){
       gundam_kits.sort((a,b) => {
         if (a.release_year < b.release_year) return -1;
@@ -161,22 +141,32 @@ function sortDates(){
         return 0;
       })
       console.log(gundam_kits)
-      showCards();
-};
-///Implemented 
-/// Function for filtering gundams by name, this will then be attached to a dropdown or button
-///Param: passing a gundam name 
-///manipulates the array then calls showCards function to display the manipulated array.
-function filterGundamName(gundam_name){
-  const lowerGundamName = gundam_name.toLowerCase();
-  for (let i = gundam_kits.length - 1; i>= 0; i--){
-    if (!gundam_kits[i].name.toLowerCase().includes(lowerGundamName)){
-        gundam_kits.splice(i,1);
-       
-    }
-    showCards();
-  }
+      showCards(gundam_kits);
 }
+
+///Implemented 
+// Function for filtering gundams by name, this will then be attached to a dropdown or button
+// Param: passing a gundam name 
+// manipulates the array then calls showCards function to display the manipulated array.
+function filterGundamName(gundam_name){
+  /// uses filter to create a new array newGundamArr, that contains only objects that has names that are passed through the parameter.
+  /// .filter is a callback function that iterates through an array and returns true if the object within the array fits the filter.
+  /// within the () the arrow function means do this for each item, or for each "gundam" do what is after this arrow.
+  /// gundam.name.slice tells the arrow to look at this specifc attribute.
+  /// the slice grabs the whole name and then checks if it starts with gundam_name
+  /// THIS IS OLD WAY OF FILTERING : const newGundamArr = gundam_kits.filter(gundam => gundam.name.slice(0,gundam_name.length) === gundam_name);
+
+  /// same thing uses filter and a placeholder object that now checks for each name of each object within the array of objects gundam_kits,
+  /// and lowercases it and checks if it includes the passed gundam name also lowercased to make it more scalabale.
+  const newGundamArr = gundam_kits.filter(gundam => gundam.name.toLowerCase().includes(gundam_name.toLowerCase()));
+  
+    console.log(newGundamArr)
+    console.log("TESTING DONE")
+    console.log(gundam_kits)
+    showCards(newGundamArr);
+  }
+
+///Function for editing card content 
 function editCardContent(card, newTitle, newImageURL) {
   card.style.display = "block";
 
@@ -186,15 +176,17 @@ function editCardContent(card, newTitle, newImageURL) {
   const cardImage = card.querySelector("img");
   cardImage.src = newImageURL;
   cardImage.alt = newTitle + " Poster";
+  ;
 
   // You can use console.log to help you debug!
-  // View the output by right clicking on your website,
-  // select "Inspect", then click on the "Console" tab
   console.log("new card:", newTitle, "- html: ", card);
 }
 
 // This calls the addCards() function when the page is first loaded
-document.addEventListener("DOMContentLoaded", showCards);
+// "() => " lets the page load first then scrolls to the top and then displays cards.
+document.addEventListener("DOMContentLoaded", () => { window.scrollTo(0,0); showCards()});
+
+
 
 function quoteAlert() {
   console.log("Button Clicked!");
@@ -203,7 +195,11 @@ function quoteAlert() {
   );
 }
 
+// Function to remove cards
+// Note: Work to remove from a copy so that original array can be shown without refreshing.
 function removeLastCard() {
-  gundam_kits.pop(); // Remove last item in titles array
-  showCards(); // Call showCards again to refresh
+  let copyArray = gundam_kits;
+  copyArray.pop(); // Remove last item in titles array
+  showCards(copyArray); // Call showCards again to refresh
 }
+
